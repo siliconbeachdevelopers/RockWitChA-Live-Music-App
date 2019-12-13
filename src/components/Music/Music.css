@@ -1,12 +1,14 @@
 .eventcard {
     display:flex;
     display: block;
+    margin:auto;
     /* align-items: center; */
     border: 1px solid black;
     height:150px;
     color:black;
     font-weight:bolder;
     box-shadow: 0px 0px 10px #888888;
+    width:700px;
     
 
    
@@ -15,7 +17,7 @@
   
     body{
      background-position: left;
-    background-image: URL('https://www.freepptbackgrounds.net/wp-content/uploads/2015/03/Listening-Music-Powerpoint-Templates.jpg');
+    background-image: URL('Listening-Music-Powerpoint-Templates.jpg');
     background-repeat:no repeat;
     max-height: 500px;
   
@@ -43,12 +45,12 @@
     text-decoration-line: underline;
     text-underline-position: below;
 }
-.item{
+/* .item{
   
   
    margin-right:300px;
    margin-left: 300px;
-}
+} */
 
 /* .btn-primary{
     background:black;
@@ -93,9 +95,10 @@ button{
 }
 
 .greensmallbtn{
-    display:flex;
+    /* display:flex;
     flex-direction: right;
-    margin-left:100px;
+    margin-left:100px; */
+    float: right;
 }
 
 .header2{
