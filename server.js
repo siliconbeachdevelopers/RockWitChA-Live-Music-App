@@ -25,10 +25,3 @@ app.listen(PORT, () => {
 })
 
 
-// REACT_APP_SONGKICK_API_KEY=eSt9JrPlCSSmZP8Q
-// REACT_APP_API_KEY=AIzaSyBR4ek5JxEL2qi9iZtj_-L1OtssW_ZxCQU
-// REACT_APP_AUTH_DOMAIN=live-music-app.firebaseapp.com
-// REACT_APP_DATABASE_URL=https://live-music-app.firebaseio.com
-// REACT_APP_PROJECT_ID=live-music-app 
-// REACT_APP_STORAGE_BUCKET=live-music-app.appspot.com 
-// REACT_APP_MESSAGING_SENDER_ID=946010095308 
