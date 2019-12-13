@@ -8,12 +8,15 @@ require('./config/db')
 const userController = require('./controllers/users')
 
 app.use(express.static(path.join(__dirname, 'build')))
-app.use(express.json())
+app.use(express.json(bodyParser.urlencoded()))
 
 app.use('/auth', userController)
 
 app.get('/api/v1/hello', (req, res) => {
     res.json({ message: 'world' })
+})
+app.get('/*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'))
 })
 
 app.get('/*', (req, res) => {
