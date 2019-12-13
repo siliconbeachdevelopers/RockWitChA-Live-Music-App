@@ -18,7 +18,11 @@ const doSignInWithGoogle = () => {
     return auth.signInWithPopup(googleProvider)
 }
 
+const doLogOut = () => auth.signOut()
+
 export {
     firebase,
-    doSignInWithGoogle
+    doSignInWithGoogle,
+    auth,
+    doLogOut
 }

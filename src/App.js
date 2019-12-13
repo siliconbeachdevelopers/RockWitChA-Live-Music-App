@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom'
 
 import NavBar from './components/NavBar'
-import Movies from './components/Movies'
-import ShowMovie from './components/ShowMovie'
+import Music from './components/Music'
+import ShowLive from './components/ShowLive'
 import SignInWithGoogle from './components/SignInWithGoogle'
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import * as ROUTES from './constants/routes'
-import { firebase } from './firebase/firebase'
+import { firebase, auth } from './firebase/firebase'
 
 import './App.css';
 
@@ -18,11 +18,15 @@ class App extends Component {
   }
 
   async componentDidMount() {
-    console.log(ROUTES.HOME)
-    console.log(firebase)
-    const message = await fetch('/api/v1/hello')
-    const messageJson = await message.json()
-    this.setState({message: messageJson.message})
+    auth.onAuthStateChanged(async authUser => {
+      if(authUser) {
+        console.log(authUser)
+        // const loginUser = await fetch(`/auth/users/${authUser.uid}`)
+        // const loginUserJson = await loginUser.json()
+        // console.log(loginUserJson)
+        this.doSetCurrentUser(authUser)
+      }
+    })
   }
 
   doSetCurrentUser = currentUser => {
@@ -37,21 +41,26 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar />
+        <h1 className="header2">
         {
           currentUser
             ? currentUser.displayName
             : null
         }
-        <h1>Hello {this.state.message}!</h1>
-        <h1>Hey Dude!</h1>
+        </h1>
+        <h1 className='loginname'> {this.state.message}</h1>
+        {/* <h1 className="head">Find Live Music!</h1> */}
         <SignInWithGoogle doSetCurrentUser={this.doSetCurrentUser}/>
+        <h1 className="">Find Live Music!</h1>
         <Switch>
-          <Route exact path={ROUTES.HOME} render={() => <div>home</div>} />
-          <Route exact path={ROUTES.LOGIN} render={() => <div>login</div>} />
-          <Route exact path={ROUTES.SIGN_UP} render={() => <div>signup</div>} />
-          <Route exact path={ROUTES.MOVIES} component={ Movies } />
-          <Route exact path={`${ROUTES.MOVIES}/:id`} component={ ShowMovie } />
+        
+          <Route exact path={ROUTES.HOME} render={() => <div className="yellow">home</div>} />
+          <Route exact path={ROUTES.LOGIN} render={() => <div className="landing"><span className="headername">Rock WitCha'<br></br></span>Login To Search Thousands of Live music shows around the country!</div>} />
+          <Route exact path={ROUTES.SIGN_UP} render={() => <div className="yellow">sign-up</div>} />
+          <Route exact path={ROUTES.MUSIC} component={ Music } />
+          <Route exact path={`${ROUTES.MUSIC}/:id`} component={ ShowLive } />
         </Switch>
+      
       </div>
     );
   }

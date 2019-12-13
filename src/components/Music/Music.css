@@ -1,0 +1,108 @@
+.eventcard {
+    display:flex;
+    display: block;
+    /* align-items: center; */
+    border: 1px solid black;
+    height:150px;
+    color:black;
+    font-weight:bolder;
+    box-shadow: 0px 0px 10px #888888;
+    
+
+   
+   
+}
+  
+    body{
+     background-position: left;
+    background-image: URL('https://www.freepptbackgrounds.net/wp-content/uploads/2015/03/Listening-Music-Powerpoint-Templates.jpg');
+    background-repeat:no repeat;
+    max-height: 500px;
+  
+    
+    
+   
+    }
+   
+.title{
+   
+    font-size:20px;
+    font-weight:bolder;
+    text-shadow:  -2px 1px 1px #bebbbb;
+    
+    
+}
+.logo{
+    
+    float: left;
+    position: relative;
+    top:-40px;
+    
+}
+.date{
+    text-decoration-line: underline;
+    text-underline-position: below;
+}
+.item{
+  
+  
+   margin-right:300px;
+   margin-left: 300px;
+}
+
+/* .btn-primary{
+    background:black;
+    float:right;
+    position: relative;
+    top:-3rem;
+
+} */
+
+.headername{
+    font-size: 80px;
+    color: yellow;
+background: #FFFFFF;
+text-shadow: 2px 0 0px #800040, 3px 2px 0px rgba(77,0,38,0.5), 3px 0 3px #FF002B, 5px 0 3px #800015, 6px 2px 3px rgba(77,0,13,0.5), 6px 0 9px #FF5500, 8px 0 9px #802A00, 9px 2px 9px rgba(77,25,0,0.5), 9px 0 18px #FFD500, 11px 0 18px yellow, 12px 2px 18px rgba(77,66,0,0.5), 12px 0 30px yellow, 14px 0 30px grey, 15px 2px 30px rgba(64,77,0,0.5), 15px 0 45px yellow, 17px 0 45px grey, 17px 2px 45px rgba(38,77,0,0.5);
+color: rgb(18, 21, 11);
+background: transparent;
+}
+
+button{
+ background:grey;
+ color:white;
+}
+
+.btn{
+    background-color: green;
+    color:white;
+}
+
+.loginname{
+    font-size:24px;
+}
+
+.landing{
+    /* background-color:rgb(226, 26, 26); */
+    font-size:28px;
+    font-weight:bold;
+    margin-top: 250px;
+    margin-left:600px;
+    margin-top:150px;
+    width: 500px;
+   
+}
+
+.greensmallbtn{
+    display:flex;
+    flex-direction: right;
+    margin-left:100px;
+}
+
+.header2{
+    
+    background:rgb(219, 42, 42);
+}
+
+.yellow{
+    color:yellow;
+}
