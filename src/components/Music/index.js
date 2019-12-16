@@ -65,7 +65,7 @@ class Music extends Component {
         </Item.Meta>
         <Item.Extra>
         <Label>{e.venue.displayNamne}</Label>
-        <Label Icon='globe' className='date' content={e.start.datetime}/><br></br>
+        {/* <Label Icon='globe' className='date' content={e.start.date}/><br></br> */}
         {/* <a href={e.uri} button type="button" class="seeshow">See Show</a> */}
         <a href={e.uri}><Button class="greensmallbtn" color='red
         '>See Show</Button></a>
