@@ -1,11 +1,7 @@
 import React, { Component, useEffect, useState } from 'react'
-// import { Link } from 'react-router-dom'
 import { MUSIC } from '../../constants/routes'
-import { Button, Icon, Image, Item, Label } from 'semantic-ui-react'
+import { Button, Image, Item, Label } from 'semantic-ui-react'
 import './Music.css';
-
-import rockinImage from './Images/rockin.jpg'
-// import rock from './guitars.jpeg'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -60,31 +56,19 @@ class Music extends Component {
       <Item.Image size='small' src={e.href} />
         <Item.Header className='title' as='a'>{e.displayName}</Item.Header>
         <Item.Meta>
-        {/* <Item.Image className="logo" size='tiny' src={}></Item.Image> */}
-        <span className='city'>{e.location.city}</span>
+         <span className='city'>{e.location.city}</span>
         </Item.Meta>
         <Item.Extra>
         <Label>{e.venue.displayNamne}</Label>
-        {/* <Label Icon='globe' className='date' content={e.start.date}/><br></br> */}
-        {/* <a href={e.uri} button type="button" class="seeshow">See Show</a> */}
-        <a href={e.uri}><Button class="greensmallbtn" color='red
-        '>See Show</Button></a>
-        {/* <a href="https://local-la.herokuapp.com/"><Item.Image className='localnew' size='tiny' src='images/localpic.png' /></a> */}
-     </Item.Extra><br></br>
+        <a href={e.uri}><Button class="greensmallbtn" color='red'>See Show</Button></a>
+        </Item.Extra><br></br>
    </Item.Content>
    
- 
    )
-   
-          }
-
-      
+    }
   </Item>
   
-  
-
-
-</React.Fragment> 
+  </React.Fragment> 
         )
   }
 }
